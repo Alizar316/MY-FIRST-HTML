@@ -1,0 +1,346 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timeless Beauty – Watch Landing Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap"rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cinzel:wght@400;700;900&display=swap"rel="stylesheet" />
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.landing-hero {
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg.jpg) center/cover no-repeat fixed;
+    padding: 14px 40px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+    backdrop-filter: blur(6px);
+}
+
+.brand-name {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 70px;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+    user-select: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+
+
+.btn-preorder  {
+            text-decoration:wavy;
+            color: white;
+            padding: 14px 45px;
+            background-image: linear-gradient(45deg,  #804e3d, #c57a68);
+            font-size: 30px;
+            font-weight: 100;
+            border-radius: 60px;
+        
+        }
+.btn-preorder:hover {
+    filter: brightness(1.1);
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
+    max-width: 800px;
+}
+
+.intro-text h1 {
+    font-family: "Cinzel", serif;
+    font-size: 170px;
+    line-height: 1;
+    font-weight: 520;
+    background: linear-gradient(120deg, #804e3d, #c57a68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 200px;
+    opacity: 0;
+    animation: fadeSlideUp 2s ease forwards;
+}
+
+.product-image {
+    width: 700px;
+    opacity: 0;
+    animation: fadeInRight 2s ease forwards;
+    margin-top: -50;
+}
+
+.feature-section {
+    background: #f7f7f7; 
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+}
+.highlight-section {
+background-color: #af6d69;
+    color: white;
+    padding: 100px 40px;
+}
+
+.highlight-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.highlight-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-text {
+    max-width: 600px;
+     color: rgb(219, 215, 215);
+}
+
+.highlight-text h2 {
+    font-size: 48px;
+    font-family: "Cinzel", serif;
+    margin-bottom: 20px;
+     color: rgb(255, 255, 255);
+}
+
+.highlight-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+.feature-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #556721; 
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff;
+    color: #333333;
+}
+
+.cta-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.cta-section a {
+    background: #393939;
+    color: #ffffff; 
+    padding: 15px 45px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-section a:hover {
+    background: #3a3a3a;
+}
+
+.site-footer {
+    background: #ffffff;
+    color: #2a2a2a;
+    padding: 30px 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.site-footer a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 6px;
+}
+
+
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+</style>
+</head>
+<header class="landing-hero" id="home">
+    <nav class="navbar">
+      <div class="brand-name">.orolgio</div>
+      <ul class="nav-links">
+  <li><a href="#">Oyster Gold</a></li>
+   <li><a href="alizar.html">Oyster Blue</a></li>
+  <li><a href="Alimurtaza.html">Oyster Green</a></li>
+ 
+</ul>
+      <a href="#" class="btn-preorder">Pre‑Order</a>
+    </nav>
+
+    <div class="intro-section">
+      <div class="intro-text">
+        <h1>
+          A Story<br>
+          In Every Second
+        </h1>
+      </div>
+      <img src="Screenshot_2025-05-23_171553-removebg-preview.png" alt="Watch product" class="product-image" />
+    </div>
+  </header>
+
+  <section class="feature-section" id="features">
+    <article class="feature-card">
+      <h3>Swiss Automatic Movement</h3>
+      <p>Enjoy unparalleled precision with a self‑winding mechanism that never needs batteries.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Sapphire Crystal</h3>
+      <p>Scratch‑resistant crystal ensures your watch face remains pristine and clear for decades.</p>
+    </article>
+    <article class="feature-card">
+      <h3>316L Stainless Steel</h3>
+      <p>Marine‑grade steel case offers exceptional corrosion resistance and a stunning polished finish.</p>
+    </article>
+    <article class="feature-card">
+      <h3>100 m Water Resistance</h3>
+      <p>Confidently wear it while swimming, snorkeling, or caught in the rain—no need to worry.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Luminescent Dial</h3>
+      <p>Super‑LumiNova coating provides brilliant legibility even in complete darkness.</p>
+    </article>
+    <article class="feature-card">
+      <h3>5‑Year International Warranty</h3>
+      <p>We stand behind our craftsmanship with an industry‑leading warranty program.</p>
+    </article>
+  </section>
+<section class="highlight-section">
+  <div class="highlight-content">
+    <div class="highlight-image">
+      <img src="Screenshot_2025-05-23_171553-removebg-preview.png" alt="Highlight Image" />
+    </div>
+    <div class="highlight-text">
+      <h2>The Oyster Perpetual Day-Date 40 in 18 ct Everose gold with a slate ombré dial, fluted bezel and a President bracelet.</h2>
+    </div>
+  </div>
+</section>
+<section class="highlight-section">
+  <div class="highlight-content">
+    <div class="highlight-image">
+      <img src="Screenshot_2025-05-23_171628-removebg-preview.png" alt="Highlight Image" />
+    </div>
+    <div class="highlight-text">
+      <p>Bright blue dial</p><br>
+<h2>A watchmaking technique</h2>
+    </div>
+  </div>
+</section>
+<section class="highlight-section">
+  <div class="highlight-content">
+    <div class="highlight-image">
+      <img src="Screenshot_2025-05-23_171623-removebg-preview.png" alt="Highlight Image" />
+    </div>
+    <div class="highlight-text">
+      <p>White Rolesor</p><br>
+<h2>The Rolex fluted bezel is a mark of distinction.</h2>
+    </div>
+  </div>
+</section>
+  <section class="cta-section">
+    <h2>Ready to own timeless beauty?</h2>
+    <a href="#">Pre‑Order Now</a>
+  </section>
+
+  <footer class="site-footer">
+    &copy; 2025 Orolgio. All rights reserved. |
+    Follow us on
+    <a href="#">Instagram</a>,
+    <a href="#">Facebook</a>,
+    <a href="#">Twitter</a>
+  </footer>
+</body>
+</html>
